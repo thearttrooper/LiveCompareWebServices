@@ -33,5 +33,39 @@ public class LiveCompareWebServiceClient {
 	    // will lose access to the result.
 	    end_result = soap.endWorkflow(token);
 	}
+
+	if (status == Status.COMPLETED) {
+	    WorkflowResult result = end_result.getWorkflowResult();
+	    Table table = result.getResult();
+	    TableHead head = table.getHead();
+	    TableBody body = table.getBody();
+	    boolean first = true;
+
+	    for (TableHeadField field : head.getField()) {
+		if (!first)
+		    System.out.print(",");
+		
+		System.out.print(field.getName());
+
+		first = false;
+	    }
+
+	    System.out.println();
+
+	    for (TableRow row : body.getRow()) {
+		first = true;
+
+		for (String cell : row.getCell()) {
+		    if (!first)
+			System.out.print(",");
+
+		    System.out.print(cell);
+		    
+		    first = false;
+		}
+
+		System.out.println();
+	    }
+	}
     }
 }
