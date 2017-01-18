@@ -1,0 +1,158 @@
+<WORKFLOW Version="1.1.0" Name="GetTableContents" GUID="{AC528B2D-BE41-40DA-8CFA-05B2BB2D6E29}" Created="17 Jan 2017 13:37:17 +0000" ObjectId="33_W_0_9E9D6A25-80B2-4D5D-904D-8AE9BEA0D5E8" IsEditable="true" Timestamp="Time_1" GetStatusKey="Whitney_DEV|WF_2|SUBID_0" Modified="17 Jan 2017 13:38:40 +0000">
+  <ID>WORKFLOW1</ID>
+  <DISPLAY_PROPERTIES>
+    <X>0</X>
+    <Y>0</Y>
+    <WIDTH>1000</WIDTH>
+    <HEIGHT>800</HEIGHT>
+    <FILL_STYLE>1</FILL_STYLE>
+    <FILL_COLOR_1>white</FILL_COLOR_1>
+    <FILL_COLOR_2>white</FILL_COLOR_2>
+    <FILL_COLOR_BACKGROUND>gray</FILL_COLOR_BACKGROUND>
+    <FILL_LINEAR_GRADIENT_MODE>3</FILL_LINEAR_GRADIENT_MODE>
+    <FILL_LINEAR_GRADIENT_VARIANT>0</FILL_LINEAR_GRADIENT_VARIANT>
+  </DISPLAY_PROPERTIES>
+  <COMPONENTS>
+    <COMPONENT>
+      <ID>1</ID>
+      <TYPE>3300</TYPE>
+      <BillsNote>Read SAP Table</BillsNote>
+      <DEFAULT_PARAM>Read SAP Table</DEFAULT_PARAM>
+      <ACTION_PROPERTIES>
+        <PARAM>
+          <INOUT>In</INOUT>
+          <DATA_TYPE>RfcDestination</DATA_TYPE>
+          <NAME DisplayName="RFC Destination">RfcDestination</NAME>
+          <VALUE Value="L">
+            <RFC_DESTINATION_ID>SAP37-EH6</RFC_DESTINATION_ID>
+          </VALUE>
+        </PARAM>
+        <PARAM>
+          <INOUT>In</INOUT>
+          <DATA_TYPE>String</DATA_TYPE>
+          <NAME DisplayName="Table Name">TableName</NAME>
+          <VALUE Value="R">3</VALUE>
+        </PARAM>
+        <PARAM Optional="true">
+          <INOUT>In</INOUT>
+          <DATA_TYPE>SelectList</DATA_TYPE>
+          <NAME DisplayName="Rows to Read">RowsToRead</NAME>
+          <VALUE/>
+        </PARAM>
+        <PARAM Optional="true">
+          <INOUT>In</INOUT>
+          <DATA_TYPE>StringList</DATA_TYPE>
+          <NAME DisplayName="Columns to Read">ColumnsToRead</NAME>
+          <FEATURE Type="Columns"/>
+          <VALUE/>
+        </PARAM>
+        <PARAM Optional="true">
+          <INOUT>In</INOUT>
+          <DATA_TYPE>Table</DATA_TYPE>
+          <NAME>Filter</NAME>
+          <VALUE/>
+        </PARAM>
+        <PARAM Optional="true">
+          <INOUT>In</INOUT>
+          <DATA_TYPE>String</DATA_TYPE>
+          <NAME DisplayName="Filter Mode">FilterMode</NAME>
+          <FEATURE Type="Enumeration" Name="FilterMode"/>
+          <VALUE/>
+        </PARAM>
+        <PARAM Optional="true">
+          <INOUT>In</INOUT>
+          <DATA_TYPE>PairList</DATA_TYPE>
+          <NAME DisplayName="Key Map">KeyMap</NAME>
+          <VALUE/>
+        </PARAM>
+        <PARAM Optional="true">
+          <INOUT>In</INOUT>
+          <DATA_TYPE>Table</DATA_TYPE>
+          <NAME DisplayName="Default Data">DefaultData</NAME>
+          <VALUE/>
+        </PARAM>
+        <PARAM>
+          <INOUT>In</INOUT>
+          <DATA_TYPE>Boolean</DATA_TYPE>
+          <NAME DisplayName="Test Rows Locally">TestRowsLocally</NAME>
+          <VALUE Value="L">
+            <BOOLEAN>false</BOOLEAN>
+          </VALUE>
+        </PARAM>
+        <PARAM>
+          <INOUT>Out</INOUT>
+          <DATA_TYPE>Table</DATA_TYPE>
+          <NAME>Result</NAME>
+          <VALUE Value="R">2</VALUE>
+        </PARAM>
+      </ACTION_PROPERTIES>
+      <DISPLAY_PROPERTIES>
+        <LABEL>Read SAP Table</LABEL>
+        <X>188</X>
+        <Y>188</Y>
+        <WIDTH>120</WIDTH>
+        <HEIGHT>60</HEIGHT>
+        <LABEL_HORIZONTAL_ALIGNMENT Invisible="true">1</LABEL_HORIZONTAL_ALIGNMENT>
+        <FONT_FACE Invisible="true">Arial</FONT_FACE>
+        <FONT_SIZE>12.0</FONT_SIZE>
+        <FONT_COLOR>black</FONT_COLOR>
+        <FONT_BOLD>false</FONT_BOLD>
+        <FONT_ITALIC>false</FONT_ITALIC>
+        <FONT_UNDERLINE>false</FONT_UNDERLINE>
+        <PALETTE_TAB Invisible="true">Actions</PALETTE_TAB>
+        <LINE_COLOR>#808080</LINE_COLOR>
+        <FILL_COLOR>#C2D0EB</FILL_COLOR>
+      </DISPLAY_PROPERTIES>
+    </COMPONENT>
+    <COMPONENT>
+      <ID>2</ID>
+      <TYPE>2100</TYPE>
+      <BillsNote>Table</BillsNote>
+      <DEFAULT_PARAM>Table</DEFAULT_PARAM>
+      <ACTION_PROPERTIES/>
+      <DISPLAY_PROPERTIES>
+        <LABEL>Result</LABEL>
+        <X>188</X>
+        <Y>278</Y>
+        <WIDTH>120</WIDTH>
+        <HEIGHT>60</HEIGHT>
+        <LABEL_HORIZONTAL_ALIGNMENT Invisible="true">1</LABEL_HORIZONTAL_ALIGNMENT>
+        <FONT_FACE Invisible="true">Arial</FONT_FACE>
+        <FONT_SIZE>12.0</FONT_SIZE>
+        <FONT_COLOR>black</FONT_COLOR>
+        <FONT_BOLD>false</FONT_BOLD>
+        <FONT_ITALIC>false</FONT_ITALIC>
+        <FONT_UNDERLINE>false</FONT_UNDERLINE>
+        <PALETTE_TAB Invisible="true">Datasets</PALETTE_TAB>
+        <LINE_COLOR>#808080</LINE_COLOR>
+        <FILL_COLOR>#C5EB96</FILL_COLOR>
+      </DISPLAY_PROPERTIES>
+    </COMPONENT>
+    <COMPONENT>
+      <ID>3</ID>
+      <TYPE>1013</TYPE>
+      <BillsNote>String</BillsNote>
+      <DEFAULT_PARAM>String</DEFAULT_PARAM>
+      <ACTION_PROPERTIES>
+        <STRING>T001</STRING>
+      </ACTION_PROPERTIES>
+      <DISPLAY_PROPERTIES>
+        <X>188</X>
+        <Y>98</Y>
+        <WIDTH>120</WIDTH>
+        <HEIGHT>60</HEIGHT>
+        <LABEL_HORIZONTAL_ALIGNMENT Invisible="true">1</LABEL_HORIZONTAL_ALIGNMENT>
+        <FONT_FACE Invisible="true">Arial</FONT_FACE>
+        <FONT_SIZE>12.0</FONT_SIZE>
+        <FONT_COLOR>black</FONT_COLOR>
+        <FONT_BOLD>false</FONT_BOLD>
+        <FONT_ITALIC>false</FONT_ITALIC>
+        <FONT_UNDERLINE>false</FONT_UNDERLINE>
+        <PALETTE_TAB Invisible="true">Parameters</PALETTE_TAB>
+        <LINE_COLOR>#808080</LINE_COLOR>
+        <FILL_COLOR>#FCF1B8</FILL_COLOR>
+        <LABEL>tableName</LABEL>
+      </DISPLAY_PROPERTIES>
+    </COMPONENT>
+  </COMPONENTS>
+</WORKFLOW>
