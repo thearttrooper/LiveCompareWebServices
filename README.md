@@ -5,6 +5,7 @@ languages.
 
 Posts covering LiveCompare web services:
 
-https://ishare.intellicorp.com/cs/cto/b/ctrueman/posts/consuming-a-livecompare-web-service-from-java-and-how-to-read-sap-tables
+[Consuming a LiveCompare Web Service From Java: How to Read SAP Tables](https://ishare.intellicorp.com/cs/cto/b/ctrueman/posts/consuming-a-livecompare-web-service-from-java-and-how-to-read-sap-tables)
 
-https://ishare.intellicorp.com/cs/cto/b/ctrueman/posts/raspberry-pi-python-and-livecompare-web-services
+[Raspberry Pi, Python and LiveCompare Web Services](https://ishare.intellicorp.com/cs/cto/b/ctrueman/posts/raspberry-pi-python-and-livecompare-web-services)
+
