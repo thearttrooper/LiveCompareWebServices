@@ -12,7 +12,6 @@ public class LiveCompareWebServiceClient {
 	int interval = start_result.getInterval();
 	Status status = Status.UNRECOGNIZED_TOKEN;
 	AsynchronousEndResult end_result = soap.endWorkflow(token);
-	boolean finished = false;
 
 	while (true) {
 	    status = end_result.getStatus();
